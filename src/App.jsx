@@ -6,6 +6,7 @@ import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Login from "./pages/Login"
 import ErrorBoundary from "./ErrorBoundary/ErrorBoundary"
+import Dashboard from "./pages/Dashboard"
 
 function App() {
   return(
@@ -16,6 +17,7 @@ function App() {
         <Route path="about" element={<ErrorBoundary><About/></ErrorBoundary>}/>
         <Route path="contact" element={<ErrorBoundary><Contact/></ErrorBoundary>}/>
         <Route path="login" element={<ErrorBoundary><Login/></ErrorBoundary>}/>
+        <Route path="/dashboard" element={<ErrorBoundary><Dashboard /></ErrorBoundary>} />
       </Routes>
 
     </>
