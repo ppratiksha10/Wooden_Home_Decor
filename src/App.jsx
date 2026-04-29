@@ -7,11 +7,13 @@ import Contact from "./pages/Contact"
 import Login from "./pages/Login"
 import ErrorBoundary from "./ErrorBoundary/ErrorBoundary"
 import Dashboard from "./pages/Dashboard"
+import Profile from "./components/Profile"
 
 function App() {
   return(
     <>
       <Navbar></Navbar>
+      <Profile></Profile>
       <Routes>
         <Route path="/" element={<ErrorBoundary><Home/></ErrorBoundary>}/>
         <Route path="about" element={<ErrorBoundary><About/></ErrorBoundary>}/>
