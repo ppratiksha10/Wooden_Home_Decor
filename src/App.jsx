@@ -8,8 +8,11 @@ import Login from "./pages/Login"
 import ErrorBoundary from "./ErrorBoundary/ErrorBoundary"
 import Dashboard from "./pages/Dashboard"
 import Profile from "./components/Profile"
+import useCounter from "./customhooks/customehook"
+import ApiCall from "./services/ApiCustome"
 
 function App() {
+  const { count, inc, dec } = useCounter();
   return(
     <>
       <Navbar></Navbar>
@@ -22,6 +25,10 @@ function App() {
         <Route path="/dashboard" element={<ErrorBoundary><Dashboard /></ErrorBoundary>} />
       </Routes>
 
+      <h1>{count}</h1>
+      <button onClick={inc} style={{ background: "red", width:"60px" }}>+</button>
+      <button onClick={dec}>-</button>
+      <ApiCall></ApiCall>
     </>
   )
 }
